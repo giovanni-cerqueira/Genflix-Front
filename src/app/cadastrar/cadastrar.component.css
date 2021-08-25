@@ -1,0 +1,149 @@
+body{
+  background-image: url('.././/../assets/imgs/GENFLIX-FUNDO.jpeg');
+    width: 100%;
+    /*background: linear-gradient(rgb(195, 137, 237), rgb(127, 94, 247));*/
+  background-blend-mode: darken;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+.card{
+  display: flex;
+
+
+}
+
+.card, .card-body, .teste{
+  /*background: linear-gradient(to right, #AF77D5, #AF77D5);*/
+  opacity: 100%;
+}
+
+.card .form-control, select{
+  /*background: linear-gradient(#e6ceeb, #e6ceeb);*/
+  border-radius: 20px;
+}
+
+.cartoes img{
+  width: 65px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.cartoes img:hover{
+  transition: .5s ease;
+  transform: scale(110%);
+}
+
+.cardholder{
+  width: 100%;
+  margin: 10px;
+}
+#cardholdername{
+  width: 100%;
+  display: block;
+
+}
+
+.cardnumber{
+
+  justify-content: center;
+  align-items: center;;
+  width: 100%;
+  font-weight: 400;
+}
+#cardnumber{
+  width: 95%;
+  display: block;
+}
+
+.dados-cartao{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.datatexto{
+  display: block;
+  text-align: center;
+  font-size: 15pt;
+  margin-bottom: 2px;
+}
+.right{
+  margin-left: 20px;
+}
+
+
+.btn{
+    border-radius: 50px;
+}
+
+
+
+.social-network li {
+  list-style: none;
+
+
+}
+
+.social-network .fa{
+  margin-top: 20px;
+  font-size: 35pt;
+  color: #000000;
+  padding: 10px;
+  margin-left: 12px;
+
+
+}
+
+
+.icones{
+  align-self: center;
+  margin: 0;
+  text-align: center;
+
+}
+
+.texto-rodape{
+  color: #000000;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.fa-linkedin-square:hover{
+  color: #0072b1;
+}
+
+.fa-github:hover{
+  color: #727272;
+}
+
+.card-body{
+  background-color: #f3f4f7;
+}
+
+.button-confirmar button{
+  margin: 5px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  background-color: #7F5EF7;
+  border: none;
+  color: #fff;
+  padding: 13px 20px 12px;
+  border-radius: 50px;
+  outline: none;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: .8s ease;
+}
+
+.button-confirmar button:hover{
+  background: linear-gradient(to right, #ba5bff, #8B65F6);
+  box-shadow: #000 0px 5px 2px;
+  transition: .2s ease;
+}

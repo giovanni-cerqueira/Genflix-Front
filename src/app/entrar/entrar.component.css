@@ -1,0 +1,93 @@
+body {
+
+  background-image: url('https://www.meta-media.fr/files/2019/06/apps.55787.9007199266246365.687a10a8-4c4a-4a47-8ec5-a95f70d8852d.jpg');
+  opacity: 1.1;
+  background-blend-mode: darken;
+
+
+}
+
+.card{
+  margin-top: 150px;
+  /*background: linear-gradient(to right, #CC8FEE, #AF77D5);*/
+  box-shadow: 7px 7px 25px;
+  opacity: 95%;
+
+}
+
+.card-body .form-control{
+  border-radius: 50px;
+}
+
+.card form .form-control{
+  color: #fff;
+}
+
+/*.form-control{
+  background: linear-gradient(#CC8FEE, #AF77D5);
+
+
+} */
+
+.btn{
+    border-radius: 50px;
+}
+
+
+
+footer li {
+  list-style: none;
+}
+
+footer .fa{
+  margin-top: 10px;
+  font-size: 35pt;
+  color: #ffffff;
+  padding: 10px;
+
+
+}
+
+.icones{
+  align-self: center;
+  margin: 0;
+  text-align: center;
+
+}
+
+.texto-rodape{
+  color: #ffffff;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.fa-linkedin-square:hover{
+  color: #0072b1;
+}
+
+.fa-github:hover{
+  color: #727272;
+}
+.button-logar button{
+  font-size: 17pt;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 100%;
+  background-color: #7F5EF7;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+  outline: none;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: .8s ease;
+}
+
+.button-logar button:hover{
+  background: linear-gradient(to right, #ba5bff, #8B65F6);
+  box-shadow: #000 0px 5px 2px;
+  transition: .2s ease;
+}
+
+

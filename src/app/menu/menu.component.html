@@ -1,0 +1,85 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <img
+    src="{{foto}}"
+    alt="imagem do user" class="img-fluid rounded-circle">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+    aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <li class="nav-item active">
+
+      </li>
+      <li class="nav-item pl-3">
+        <p class="m-0 font-weight-bold text-white fs-16"> Olá, {{nome}}</p>
+      </li>
+
+      <li class="nav-item pl-3">
+        <a [routerLink]="['/user-edit', id]">
+          <p class="text-white fs-16 m-0"> <i class="fa fa-pencil-square-o" aria-hidden="true"></i> </p>
+        </a>
+      </li>
+
+    </ul>
+
+
+    <ul class="navbar-nav ml-auto d-flex align-items-center">
+      <li class="nav-item pl-3">
+        <a (click)='sair()'
+        class="m-0 font-weight-bold text-white fs-16"> Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+        </a>
+      </li>
+
+    </ul>
+
+
+  </div>
+</nav>
+
+
+
+
+<!-- NAVBAR DA GENFLIX-->
+
+
+<!-- Menu - Barra de navegação -->
+<!--
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navbar-opacidade">
+  <div class="container-fluid">
+    <!-- <a class="navbar-brand text-uppercase fw-bold text-warning" href="index.html">GENFLIX</a>
+    <img src="assets/perfil-usuario.jpg" alt="" width="40px" height="40px" class="img-fluid rounded-circle">
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="filmes.html">Filmes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="series.html">Séries</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active fw-bold" aria-current="page" href="assine.html">Pacotes</a>
+        </li>
+      </ul>
+
+
+      <form class="d-flex">
+        <input class="form-control me-2 bg-dark text-white" type="search" placeholder="Digite..." aria-label="Search">
+        <button class="btn btn-outline-secondary" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </div>
+</nav> -->
+<!-- /Menu - Barra de navegação -->
