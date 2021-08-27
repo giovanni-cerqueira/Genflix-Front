@@ -9,15 +9,15 @@
             <h5 class="card-title text-center text-dark mb-5 fw-light display-6">Entrar</h5>
             <form>
               <div class="form-floating mb-3 text-muted">
-                <input [(ngModel)]='userLogin.login' type="email" class="form-control" id="floatingInput"
-                  placeholder="name@example.com">
-                <label for="floatingInput">Email</label>
+                <input [(ngModel)]='userLogin.login' name="usuario" type="text" class="form-control" id="usuario"
+                  placeholder="email@examplo.com">
+                <label for="usuario">Email</label>
               </div>
 
               <div class="form-floating mb-3 text-muted">
-                <input [(ngModel)]='userLogin.senha' type="password" class="form-control" id="floatingPassword"
+                <input [(ngModel)]='userLogin.senha' name="senha" type="password" class="form-control" id="senha"
                   placeholder="Password">
-                <label for="floatingPassword">Senha</label>
+                <label for="usuario">Senha</label>
               </div>
 
               <div class="button-logar">
@@ -32,45 +32,11 @@
         </div>
       </div>
     </div>
-  </div>
 
-
-  <footer>
-    <div class="icones">
-      <div class="row container-fluid">
-        <div class="col-md-12 d-flex justify-content-center">
-
-          <ul class="social-network d-flex">
-            <li>
-              <a href="https://github.com/Giovanni-SVC" target="_blank" class="iconGithub">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.linkedin.com/in/giovannicerqueira/" target="_blank" class="iconLinkedin">
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-      </div>
-
-
-
-
-      <p class="texto-rodape">
-        Todos os direitos reservados. <br> &copy; Giovanni Cerqueira
-      </p>
-
-    </div>
-
-  </footer>
 
 
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </div>
 </body>

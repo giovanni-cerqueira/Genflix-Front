@@ -1,6 +1,7 @@
 body {
 
   background-image: url('https://www.meta-media.fr/files/2019/06/apps.55787.9007199266246365.687a10a8-4c4a-4a47-8ec5-a95f70d8852d.jpg');
+  height: 100vh;
   opacity: 1.1;
   background-blend-mode: darken;
 

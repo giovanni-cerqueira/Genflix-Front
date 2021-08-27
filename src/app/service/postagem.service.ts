@@ -18,27 +18,27 @@ export class PostagemService {
   }
 
   getAllPostagens(): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>('https://blogdogio.herokuapp.com/postagens')
+    return this.http.get<Postagem[]>('https://genflix.herokuapp.com/postagens')
   }
 
   getByIdPostagem(id: number): Observable<Postagem>{
-  return this.http.get<Postagem>(`https://blogdogio.herokuapp.com/postagens/${id}`)
+  return this.http.get<Postagem>(`https://genflix.herokuapp.com/postagens/${id}`)
   }
 
   getByTituloPostagem(titulo: string): Observable<Postagem[]>{
-    return this.http.get<Postagem[]>(`https://blogdogio.herokuapp.com/postagens/titulo/${titulo}`)
+    return this.http.get<Postagem[]>(`https://genflix.herokuapp.com/postagens/titulo/${titulo}`)
   }
 
   postPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.post<Postagem>('https://blogdogio.herokuapp.com/postagens', postagem)
+    return this.http.post<Postagem>('https://genflix.herokuapp.com/postagens', postagem)
   }
 
   putPostagem(postagem: Postagem): Observable<Postagem>{
-    return this.http.put<Postagem>('https://blogdogio.herokuapp.com/postagens', postagem)
+    return this.http.put<Postagem>('https://genflix.herokuapp.com/postagens', postagem)
   }
 
   deletePostagem(id: number){
-    return this.http.delete(`https://blogdogio.herokuapp.com/postagens/${id}`)
+    return this.http.delete(`https://genflix.herokuapp.com/postagens/${id}`)
   }
 
 

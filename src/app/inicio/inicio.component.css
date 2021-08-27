@@ -1,7 +1,28 @@
 .fs-54{
-  font-size: 54pt;
+  font-size: 34pt;
 }
 
 .fs-18{
   font-size: 18pt;
+}
+
+#postagens{
+  background-color: #343A40;
+}
+.container{
+  background-color: #343A40 !important;
+}
+body{
+  background-color: #343A40 !important;
+}
+.container-fluid .card{
+  border: #f3f4f7;
+  margin-bottom: 20px !important;
+}
+.card .card-body{
+  background-color: #6C757D;
+  color: #f3f4f7;
+}
+.card p, small, span{
+  color: #f3f4f7 !important;
 }
