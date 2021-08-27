@@ -61,7 +61,7 @@
 
         <div class="row d-flex justify-content-center mt-5">
           <div class="col-md-8">
-            <div class="card" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+            <div class="card border-0" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
               <div class="card-body">
 
 
@@ -70,14 +70,14 @@
                   <div class="row align-items-center  text-center">
                     <img class="rounded-circle" style="width: 90px; height: 90px;" src="{{item.usuario.foto}}">
 
-                    <h5 class="m-3">{{item.usuario.nome}}</h5>
+                    <h6 class="m-3">{{item.usuario.nome}}</h6>
                   </div>
 
                 </div>
 
 
                 <div class="col-md-12">
-                  <h5 class="card-title">{{item.titulo}}</h5>
+                  <h5 class="card-title mt-2">{{item.titulo}}</h5>
 
 
                   <p>{{item.texto}}</p>
@@ -136,12 +136,7 @@
                           src="{{item.usuario.foto}}">
                       </div>
 
-
                     </div> -->
-
-
-
-
 
                     <!--   <small class="card-text">Tema: {{item.tema.descricao}}</small> -->
 
@@ -211,55 +206,44 @@
         </div>
 
 
+
         <div class="row d-flex justify-content-center mt-5">
-          <div class="col-md-8">
-            <div class="card" *ngFor='let tema of listaTemas'>
-              <div class="card-body" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
-                <div class="row d-flex">
-                  <div class="col-md-12">
-
-                    <div class="row d-flex">
-                      <div class="col-md-2">
-                        <img class="card-img-top rounded-circle bd-highlight" style="width: 90px; height: 90px;"
-                          src="{{item.usuario.foto}}">
-                      </div>
-
-                      <div class="col-md-8">
-                        <p><span class="text-muted">{{item.usuario.nome}}</span>
-                        </p>
-                      </div>
-                    </div>
+          <div class="col-md-8" *ngFor='let tema of listaTemas'>
+            <div class="card mt-3 border-0" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
+              <div class="card-body " >
 
 
 
+                <div class="col-md-6">
+                  <div class="row align-items-center  text-center">
+                    <img class="rounded-circle" style="width: 90px; height: 90px;" src="{{item.usuario.foto}}">
 
-
-
-                    <h5 class="card-title">{{item.titulo}}</h5>
-
-
+                    <h6 class="m-3">{{item.usuario.nome}}</h6>
                   </div>
+
                 </div>
 
 
-                <div>
+                <div class="col-md-12">
+                  <h5 class="card-title mt-2">{{item.titulo}}</h5>
+
+
                   <p>{{item.texto}}</p>
                   <p><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às
                       {{item.data | date: 'HH:mm'}}</small></p>
 
-
                 </div>
+
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
 
 
-
-
-
-
-        <!--
+  <!--
         <div class="card-columns" *ngFor='let tema of listaTemas'>
           <div class="card text-center" style="width: 18rem;"
             *ngFor='let item of tema.postagem | orderBy : key : reverse'>
@@ -279,9 +263,7 @@
         </div> -->
 
 
-      </div>
-    </div>
-  </div>
+
 
 
   <!-- Modal -->
