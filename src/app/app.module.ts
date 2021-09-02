@@ -26,6 +26,7 @@ import { FilmesComponent } from './filmes/filmes.component';
 import { SeriesComponent } from './series/series.component';
 import { PacotesComponent } from './pacotes/pacotes.component';
 import { CriticasComponent } from './criticas/criticas.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 
 
@@ -51,6 +52,7 @@ import { CriticasComponent } from './criticas/criticas.component';
     SeriesComponent,
     PacotesComponent,
     CriticasComponent
+
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { CriticasComponent } from './criticas/criticas.component';
     HttpClientModule,
     FormsModule,
     ModalModule.forRoot(),
-    OrderModule
+    OrderModule,
+    CarouselModule
   ],
   providers: [{
     provide: LocationStrategy,
