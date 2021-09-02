@@ -27,14 +27,14 @@ text-align: center;
   position: relative;
   display: flex;
   justify-content: center;
-  width: 100%;
+
 }
 .box-film{
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
-  width: auto !important;
-  height: auto !important;
+  width: 360px !important;
+  height: 580px !important;
 }
 .box-film image{
 display: block !important;
