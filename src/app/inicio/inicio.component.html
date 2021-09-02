@@ -85,6 +85,8 @@
                       {{item.data | date: 'HH:mm'}}</small></p>
 
                 </div>
+                <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
 
               </div>
             </div>
@@ -233,6 +235,8 @@
                       {{item.data | date: 'HH:mm'}}</small></p>
 
                 </div>
+                <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
+                <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
 
               </div>
             </div>
