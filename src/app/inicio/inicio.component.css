@@ -9,11 +9,18 @@
 #postagens{
   background-color: #343A40;
 }
-.container{
-  background-color: #343A40 !important;
+
+.comeco{
+  background-color: #343A40;
 }
 body{
   background-color: #343A40 !important;
+}
+.texto1{
+  margin-top: 150px !important;
+}
+.imagem-lado{
+  margin-top: 180px !important;
 }
 .container-fluid .card{
   border: #f3f4f7;

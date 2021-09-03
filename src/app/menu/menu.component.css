@@ -12,3 +12,19 @@ img{
   width: 50px;
   height: 50px;
 }
+
+#navbar-opacidade {
+  background-color: rgb(0, 0, 0, 0.6);
+}
+
+#corgenflix{
+  color: #CC8FEE;
+}
+
+form .form-control{
+  border-radius: 50px;
+}
+
+.dropdown{
+  margin-right: 60px;
+}
