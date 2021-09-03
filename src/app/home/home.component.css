@@ -1,40 +1,41 @@
-.container{
+.container-fluid{
+
   background-color: #343A40 !important;
 }
 body{
+
   background-color: #343A40 !important;
 }
 .titulo-filmes{
   margin-top: 110px;
 }
 
-.jumbotron h3{
+h3{
 margin: 0;
 text-align: center;
 margin-bottom: 20px;
 font-size: 25px;
 
 }
+.card-body .card-title{
+display: flex;
+justify-content: center;
+}
 
-.jumbofirst {
-margin-top: 80px;
-}
-.card-title{
-text-align: center;
-}
 
 .thumbnail {
   position: relative;
   display: flex;
   justify-content: center;
+  width: 95%;
 
 }
 .box-film{
   display: block;
   justify-content: center;
   align-items: center;
-  width: 360px !important;
-  height: 580px !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 .box-film image{
 display: block !important;
@@ -74,3 +75,4 @@ opacity: 1;
 cursor: pointer;
 
 }
+

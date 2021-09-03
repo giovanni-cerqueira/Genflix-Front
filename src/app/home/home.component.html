@@ -6,46 +6,128 @@
   <!-- Grid-->
 
 
-
-  <!--jumbotron-->
-
-  <div class="jumbotron bg-dark">
-    <div class="jumbofirst">
-      <div class="text-light">
-        <h3 class="display-8">Mais populares</h3>
-
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="../../assets/imagens-catalogo/vingadores-carrossel.jpg" alt="Primeiro Slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../../assets/imagens-catalogo/sda-carrossel.jpg" alt="Segundo Slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="../../assets/imagens-catalogo/harry-carrossel.jpg" alt="Terceiro Slide">
       </div>
     </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
   </div>
 
 
 
-  <div class="container-fluid bg-dark">
-    <div>Some tags before</div>
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide [width]=1200>
 
-          <div class="thumbnail">
-            <img class="box-film" src="../../assets/imagens-catalogo/joker.jpg">
-            <div class="overlay">
-            </div>
+  <div class="container-fluid bg-dark mt-5">
+    <div class="comeco">
+      <h3 class="display-8 text-light">Mais populares</h3></div>
+    <owl-carousel-o [options]="customOptions">
+      <ng-template carouselSlide>
+
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/hangover-3.jpg">
+          <div class="overlay">
           </div>
-          <div class="card-body">
-            <h5 class="card-title text-light">Coringa</h5>
-          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Se Beber, Não Case III</h5>
+        </div>
 
       </ng-template>
 
-        <div>
-          <div class="thumbnail">
-            <img class="box-film" src="../../assets/imagens-catalogo/bvs.jpg">
-            <div class="overlay">
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title text-light">Coringa</h5>
+      <ng-template carouselSlide>
+
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/harry-potter.jpg">
+          <div class="overlay">
           </div>
         </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Harry Potter e as Relíquias da Morte: Parte II</h5>
+        </div>
+
+      </ng-template>
+
+      <ng-template carouselSlide>
+
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/game-of-thrones.jpg">
+          <div class="overlay">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Game of Thrones</h5>
+        </div>
+
+      </ng-template>
+
+      <ng-template carouselSlide>
+
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/naruto.jpg">
+          <div class="overlay">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Naruto</h5>
+        </div>
+
+      </ng-template>
+
+      <ng-template carouselSlide>
+
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/familia-do-bagulho.jpg">
+          <div class="overlay">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light">Família do Bagulho</h5>
+        </div>
+
+      </ng-template>
+
+      <ng-template carouselSlide>
+
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/joker.jpg">
+          <div class="overlay">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Coringa</h5>
+        </div>
+
+      </ng-template>
+
+      <div>
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/bvs.jpg">
+          <div class="overlay">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Batman v. Superman</h5>
+        </div>
+      </div>
 
       <ng-template carouselSlide>
         <div>
@@ -55,7 +137,7 @@
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title text-light">Coringa</h5>
+            <h5 class="card-title text-light text-center">Homem Aranha no Aranhaverso</h5>
           </div>
         </div>
       </ng-template>
@@ -67,7 +149,7 @@
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title text-light">Coringa</h5>
+            <h5 class="card-title text-light text-center">Superbad</h5>
           </div>
         </div>
       </ng-template>
@@ -79,7 +161,7 @@
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title text-light">Coringa</h5>
+            <h5 class="card-title text-light text-center">Shingeki no Kyojin</h5>
           </div>
         </div>
       </ng-template>
@@ -89,7 +171,7 @@
 
     <div class="jumbotron jumbotron-fluid bg-dark">
       <div class="container">
-        <div class="text-light">
+        <div class="text-light ">
           <h3 class="display-8">Comédia</h3>
 
         </div>
