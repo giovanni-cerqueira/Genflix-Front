@@ -15,6 +15,7 @@ export class UserEditComponent implements OnInit {
   idUser: number
   confirmarSenha: string
   tipoUsuario: string
+  foto = environment.foto
 
 
   constructor(

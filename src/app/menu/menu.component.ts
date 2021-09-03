@@ -1,6 +1,8 @@
 import { environment } from './../../environments/environment.prod';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { PostagemService } from '../service/postagem.service';
+import { Postagem } from '../model/Postagem';
 
 @Component({
   selector: 'app-menu',
@@ -19,7 +21,9 @@ export class MenuComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
   }
+
 
   sair(){
     this.router.navigate(['/entrar'])

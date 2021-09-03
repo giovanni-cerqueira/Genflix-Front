@@ -77,7 +77,7 @@
 
 
                 <div class="col-md-12">
-                  <h5 class="card-title mt-2">{{item.titulo}}</h5>
+                  <h5 class="card-title mt-4">{{item.titulo}}</h5>
 
 
                   <p>{{item.texto}}</p>
@@ -85,8 +85,8 @@
                       {{item.data | date: 'HH:mm'}}</small></p>
 
                 </div>
-                <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+                <button *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</button>
+                <button *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</button>
 
               </div>
             </div>
