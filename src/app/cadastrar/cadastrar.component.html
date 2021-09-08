@@ -1,15 +1,15 @@
     <body>
 
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
 
 
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-6">
 
 
 
             <div class="card">
-              <div class="card-body p-4 p-sm-5">
+              <div class="card-body p-sm-5">
 
                 <h5 class="card-title text-center text-dark mb-5 fw-light display-6">Cadastre-se</h5>
 
@@ -31,52 +31,52 @@
                 <div class="form-group text-white fw-bold">
                   <label for="nome"></label>
                   <input [(ngModel)]='user.nome' class="form-control" type="text" name="nome" id="nome"
-                    placeholder="Nome Completo">
+                    placeholder="  Nome Completo">
                 </div>
 
 
                 <div class="form-group text-white fw-bold">
                   <label for="usuario"></label>
                   <input [(ngModel)]='user.login' class="form-control" type="text" name="usuario" id="usuario"
-                    placeholder="Seu Email">
+                    placeholder="  Seu Email">
                 </div>
 
 
                 <div class="form-group text-white fw-bold">
                   <label for="usuario"></label>
                   <input (input)='confirmSenha($event)' class="form-control" type="password" name="senha" id="senha"
-                    placeholder="Sua senha">
+                    placeholder="  Sua senha">
                 </div>
 
                 <div class="form-group text-white fw-bold">
                   <label for="usuario"></label>
                   <input [(ngModel)]='user.senha' class="form-control" type="password" name="senha" id="senha"
-                    placeholder="Confirme sua senha">
+                    placeholder="  Confirme sua senha">
                 </div>
 
                 <div class="form-group text-white fw-bold">
                   <label for="usuario"></label>
                   <input [(ngModel)]='user.foto' class="form-control" type="text" name="foto" id="foto"
-                    placeholder="Link da foto de perfil" />
+                    placeholder="  Link da foto de perfil" />
                 </div>
 
 
                 <div class="form-group text-white fw-bold">
                   <label for="cardholdername"></label>
                   <input [(ngModel)]='user.dataNascimento' class="form-control" type="date" name="dataNasc"
-                    id="dataNasc" placeholder="Data de Nascimento">
+                    id="dataNasc" placeholder="  Data de Nascimento">
                 </div>
 
 
                 <div class="form-group text-white fw-bold">
                   <label for="cardholdername"></label>
-                  <input class="form-control" type="tex" name="senha" id="senha" placeholder="Nome no Cartão" />
+                  <input class="form-control" type="tex" name="senha" id="senha" placeholder="  Nome no Cartão" />
                 </div>
 
                 <div class="form-group text-white fw-bold">
                   <label for="cardholdername"></label>
                   <input class="form-control" type="text" name="numerocartao" id="numerocartao" pattern="[0-9]{16,19}"
-                    maxlength="19" placeholder="8888-8888-8888-8888" />
+                    maxlength="19" placeholder="  8888-8888-8888-8888" />
                 </div>
 
                 <div class="dados-cartao row d-flex justify-content-center">
@@ -120,7 +120,7 @@
 
                   <div class="cvv">
                     <label class="cvv text-white" for="cvv"></label>
-                    <input class="form-control" type="password" name="senha" id="senha" placeholder="CVV">
+                    <input class="form-control" type="password" name="senha" id="senha" placeholder="  CVV">
                   </div>
                 </div>
 

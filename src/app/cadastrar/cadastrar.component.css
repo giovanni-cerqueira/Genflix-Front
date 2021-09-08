@@ -1,24 +1,27 @@
+*{
+  margin: 0 auto;
+  padding: 0;
+}
 body{
-  background-image: url('.././/../assets/imgs/GENFLIX-FUNDO.jpeg');
+  background-image: url('.././/../assets/imgs/imagem-fundo-login.jpg');
   display: flex;
   justify-content: center;
   width: 100%;
     /*background: linear-gradient(rgb(195, 137, 237), rgb(127, 94, 247));*/
   background-blend-mode: darken;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-  }
-
-.card{
-  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
 }
+.card{
+  display: flex;
+  justify-content: center;
+  background-color: #f3f4f7;
+}
 
-.card, .card-body, .teste{
+.card, .card-body{
   /*background: linear-gradient(to right, #AF77D5, #AF77D5);*/
   opacity: 100%;
 }
@@ -38,15 +41,9 @@ body{
   transition: .5s ease;
   transform: scale(110%);
 }
-
-.cardholder{
-  width: 100%;
-  margin: 10px;
-}
 #cardholdername{
   width: 100%;
   display: block;
-
 }
 
 .cardnumber{
@@ -87,13 +84,14 @@ body{
 
 .card-body{
   background-color: #f3f4f7;
+  width: 500px;
 }
 
 .button-confirmar button{
   margin: 5px;
   font-size: 17px;
   font-weight: 400;
-  margin-top: 5px;
+  margin-top: 45px;
   letter-spacing: 1px;
   background-color: #7F5EF7;
   border: none;
@@ -101,12 +99,10 @@ body{
   padding: 13px 20px 12px;
   border-radius: 50px;
   outline: none;
-  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: .8s ease;
 }
 
 .button-confirmar button:hover{
-  background: linear-gradient(to right, #ba5bff, #8B65F6);
-  box-shadow: #000 0px 5px 2px;
-  transition: .2s ease;
+  border: #000 0.1px solid;
+  background-color: transparent;
+  color: #000;
 }
