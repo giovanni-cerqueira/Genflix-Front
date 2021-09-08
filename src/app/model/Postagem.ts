@@ -11,6 +11,7 @@ export class Postagem{
     public curtidas: number
     public tipo: string
     public foto: string
+    public critica: string
     public usuario: User
     public tema: Tema
 }
