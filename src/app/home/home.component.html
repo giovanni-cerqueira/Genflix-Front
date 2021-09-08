@@ -37,149 +37,268 @@
 
 
   <div class="container-fluid bg-dark mt-5">
-    <div class="comeco">
-      <h3 class="display-8 text-light">Mais populares</h3></div>
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide>
 
-        <div class="thumbnail">
-          <img class="box-film" src="../../assets/imagens-catalogo/hangover-3.jpg">
-          <div class="overlay">
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Se Beber, Não Case III</h5>
-        </div>
-
-      </ng-template>
-
-      <ng-template carouselSlide>
-
-        <div class="thumbnail">
-          <img class="box-film" src="../../assets/imagens-catalogo/harry-potter.jpg">
-          <div class="overlay">
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Harry Potter e as Relíquias da Morte: Parte II</h5>
-        </div>
-
-      </ng-template>
-
-      <ng-template carouselSlide>
-
-        <div class="thumbnail">
-          <img class="box-film" src="../../assets/imagens-catalogo/game-of-thrones.jpg">
-          <div class="overlay">
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Game of Thrones</h5>
-        </div>
-
-      </ng-template>
-
-      <ng-template carouselSlide>
-
-        <div class="thumbnail">
-          <img class="box-film" src="../../assets/imagens-catalogo/naruto.jpg">
-          <div class="overlay">
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Naruto</h5>
-        </div>
-
-      </ng-template>
-
-      <ng-template carouselSlide>
-
-        <div class="thumbnail">
-          <img class="box-film" src="../../assets/imagens-catalogo/familia-do-bagulho.jpg">
-          <div class="overlay">
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-light">Família do Bagulho</h5>
-        </div>
-
-      </ng-template>
-
-      <ng-template carouselSlide>
-
-        <div class="thumbnail">
-          <img class="box-film" src="../../assets/imagens-catalogo/joker.jpg">
-          <div class="overlay">
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Coringa</h5>
-        </div>
-
-      </ng-template>
-
-      <div>
-        <div class="thumbnail">
-          <img class="box-film" src="../../assets/imagens-catalogo/bvs.jpg">
-          <div class="overlay">
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-light text-center">Batman v. Superman</h5>
-        </div>
-      </div>
-
-      <ng-template carouselSlide>
-        <div>
-          <div class="thumbnail">
-            <img class="box-film" src="../../assets/imagens-catalogo/homem-aranha.jpg">
-            <div class="overlay">
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title text-light text-center">Homem Aranha no Aranhaverso</h5>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div>
-          <div class="thumbnail">
-            <img class="box-film" src="../../assets/imagens-catalogo/superbad.jpg">
-            <div class="overlay">
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title text-light text-center">Superbad</h5>
-          </div>
-        </div>
-      </ng-template>
-      <ng-template carouselSlide>
-        <div>
-          <div class="thumbnail">
-            <img class="box-film" src="../../assets/imagens-catalogo/aot.jpg">
-            <div class="overlay">
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title text-light text-center">Shingeki no Kyojin</h5>
-          </div>
-        </div>
-      </ng-template>
-    </owl-carousel-o>
-    <div>Some tags after</div>
-
-
-    <div class="jumbotron jumbotron-fluid bg-dark">
-      <div class="container">
-        <div class="text-light ">
-          <h3 class="display-8">Comédia</h3>
-
-        </div>
+    <div class="row d-flex align-items-center text-center justify-content-center mb-5">
+      <div class="col-md-6">
+        <button *ngIf='authService.adm()' class="btn btn-outline-light mr-2" data-bs-toggle="modal" data-bs-target="#novaPostagem"
+          data-toggle="modal" data-target="#novaPostagem">
+          Adicionar Filme
+        </button>
       </div>
     </div>
 
 
+    <div class="tab-pane fade show active" id="todasPostagens" role="tabpanel" aria-labelledby="nav-todasPostagens-tab">
+
+      <div class="row d-flex justify-content-center mt-5">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" id="titulo" placeholder="Digite o título para pesquisar"
+              [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row d-flex justify-content-center mt-5">
+        <div class="col-md-6">
+          <div class="card border-0" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+            <div class="card-body"> -->
+
+      <div class="comeco">
+        <h3 class="display-8 text-light">Mais populares</h3>
+      </div>
+      <owl-carousel-o [options]="customOptions">
+
+        <ng-template carouselSlide *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+          <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-center text-info mr-3"
+            href="">Editar</a>
+          <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-center text-danger"
+            href="">Apagar</a>
+
+          <div class="thumbnail">
+            <img class="box-film" src="{{item.foto}}">
+            <div class="overlay">
+            </div>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title text-light text-center">{{item.titulo}}
+            </h5>
+          </div>
+
+        </ng-template>
+
+      </owl-carousel-o>
+
+
+
+      <!-- <div class="col-md-6">
+                <div class="row align-items-center  text-center">
+                  <img class="rounded-circle" style="width: 50px; height: 50px;" src="{{item.usuario.foto}}">
+
+                  <h6 class="m-3">{{item.usuario.nome}}</h6>
+                </div>
+
+              </div>
+
+
+              <div class="col-md-12">
+                <h5 class="card-title mt-4">{{item.titulo}}</h5>
+
+
+                <p>{{item.texto}}</p>
+                <p><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às
+                    {{item.data | date: 'HH:mm'}}</small></p>
+
+              </div>
+
+
+      <button *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3"
+        href="">Editar</button>
+      <button *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger"
+        href="">Apagar</button> -->
+
+    </div>
   </div>
+  <!-- </div>
+  </div>
+  </div> -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="novaPostagem" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Adicione um filme ao catálogo</h5>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="titulo">Título</label>
+            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+              placeholder="Digite o título do filme (Exemplo: Shrek)">
+          </div>
+
+          <div class="form-group">
+            <label for="conteudo">Link da Foto:</label>
+            <textarea [(ngModel)]='postagem.foto' name="texto" id="conteudo" class="form-control" rows="3"></textarea>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-success" data-dismiss="modal" (click)='publicar()'>Publicar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="comeco">
+    <h3 class="display-8 text-light">Mais populares</h3>
+  </div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+
+      <div class="thumbnail">
+        <img class="box-film" src="../../assets/imagens-catalogo/hangover-3.jpg">
+        <div class="overlay">
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-light text-center">Se Beber, Não Case III</h5>
+      </div>
+
+    </ng-template>
+
+    <ng-template carouselSlide>
+
+      <div class="thumbnail">
+        <img class="box-film" src="../../assets/imagens-catalogo/harry-potter.jpg">
+        <div class="overlay">
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-light text-center">Harry Potter e as Relíquias da Morte: Parte II</h5>
+      </div>
+
+    </ng-template>
+
+    <ng-template carouselSlide>
+
+      <div class="thumbnail">
+        <img class="box-film" src="../../assets/imagens-catalogo/game-of-thrones.jpg">
+        <div class="overlay">
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-light text-center">Game of Thrones</h5>
+      </div>
+
+    </ng-template>
+
+    <ng-template carouselSlide>
+
+      <div class="thumbnail">
+        <img class="box-film" src="../../assets/imagens-catalogo/naruto.jpg">
+        <div class="overlay">
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-light text-center">Naruto</h5>
+      </div>
+
+    </ng-template>
+
+    <ng-template carouselSlide>
+
+      <div class="thumbnail">
+        <img class="box-film" src="../../assets/imagens-catalogo/familia-do-bagulho.jpg">
+        <div class="overlay">
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-light">Família do Bagulho</h5>
+      </div>
+
+    </ng-template>
+
+    <ng-template carouselSlide>
+
+      <div class="thumbnail">
+        <img class="box-film" src="../../assets/imagens-catalogo/joker.jpg">
+        <div class="overlay">
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-light text-center">Coringa</h5>
+      </div>
+
+    </ng-template>
+
+    <div>
+      <div class="thumbnail">
+        <img class="box-film" src="../../assets/imagens-catalogo/bvs.jpg">
+        <div class="overlay">
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-light text-center">Batman v. Superman</h5>
+      </div>
+    </div>
+
+    <ng-template carouselSlide>
+      <div>
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/homem-aranha.jpg">
+          <div class="overlay">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Homem Aranha no Aranhaverso</h5>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div>
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/superbad.jpg">
+          <div class="overlay">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Superbad</h5>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template carouselSlide>
+      <div>
+        <div class="thumbnail">
+          <img class="box-film" src="../../assets/imagens-catalogo/aot.jpg">
+          <div class="overlay">
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title text-light text-center">Shingeki no Kyojin</h5>
+        </div>
+      </div>
+    </ng-template>
+  </owl-carousel-o>
+  <div>Some tags after</div>
+
+
+  <div class="jumbotron jumbotron-fluid bg-dark">
+    <div class="container">
+      <div class="text-light ">
+        <h3 class="display-8">Comédia</h3>
+
+      </div>
+    </div>
+  </div>
+
+
+
 
 
 

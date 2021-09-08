@@ -41,5 +41,14 @@ export class PostagemService {
     return this.http.delete(`https://genflix.herokuapp.com/postagens/${id}`)
   }
 
+  adm(){
+    let ok: boolean = false
+
+    if(environment.tipo == 'adm'){
+      ok = true
+    }
+    return ok
+  }
+
 
 }
