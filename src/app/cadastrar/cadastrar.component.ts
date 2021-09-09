@@ -14,6 +14,8 @@ export class CadastrarComponent implements OnInit {
   confirmarSenha: string
   tipoUsuario: string
 
+  verificador = /(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/g;
+
   constructor(
     private authService: AuthService,
     private router: Router
@@ -47,6 +49,13 @@ export class CadastrarComponent implements OnInit {
         alert('Usuário cadastrado com sucesso!')
       })
 
+    }
+
+    if (this.verificador.test(this.user.foto)) {
+      this.user.foto = this.user.foto
+    }
+    else {
+      this.user.foto = "https://imgur.com/T1NhiS6"
     }
 
   }

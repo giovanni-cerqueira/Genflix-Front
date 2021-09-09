@@ -5,6 +5,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Postagem } from 'src/app/model/Postagem';
 import { Tema } from 'src/app/model/Tema';
+import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
   selector: 'app-postagem-edit',
@@ -19,11 +20,14 @@ export class PostagemEditComponent implements OnInit {
   idTema: number
 
 
+
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private postagemService: PostagemService,
-    private temaService: TemaService
+    private temaService: TemaService,
+    public authService: AuthService
+
   ) { }
 
   ngOnInit(){

@@ -23,19 +23,22 @@ justify-content: center;
 }
 
 
-.thumbnail {
+.thumbnail, .card-body, .card-title{
   position: relative;
   display: flex;
   justify-content: center;
   width: 95%;
-
+}
+owl-carousel-o{
+  width: 180px !important;
+  height: 270px !important;
 }
 .box-film{
   display: block;
   justify-content: center;
   align-items: center;
-  width: 100% !important;
-  height: 100% !important;
+  width: 180px !important;
+  height: 270px !important;
 }
 .box-film image{
 display: block !important;
