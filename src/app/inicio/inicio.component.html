@@ -201,8 +201,12 @@
         <div class="row d-flex justify-content-center mt-5 mb-5">
           <div class="col-md-4">
             <div class="form-group">
-              <input type="text" class="form-control" id="titulo" placeholder="Digite um gênero para pesquisar"
+              <input type="text" class="form-control" id="titulo" placeholder="Digite a categoria para pesquisar (exemplo: filme ou série)"
                 [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="titulo" placeholder="Digite um gênero para pesquisar (exemplo: Comédia)"
+                [(ngModel)]='nomeTema' (keyup)='findByGeneroTema()'>
             </div>
           </div>
         </div>
