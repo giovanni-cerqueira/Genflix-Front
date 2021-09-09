@@ -54,7 +54,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <input type="text" class="form-control" id="titulo" placeholder="Digite o título para pesquisar"
-                [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()'>
+                [(ngModel)]='tituloPost' (keyup)='findByNomeCritica()'>
             </div>
           </div>
         </div>
@@ -201,12 +201,12 @@
         <div class="row d-flex justify-content-center mt-5 mb-5">
           <div class="col-md-4">
             <div class="form-group">
-              <input type="text" class="form-control" id="titulo" placeholder="Digite a categoria para pesquisar (exemplo: filme ou série)"
+              <input type="text" class="form-control" id="titulo" placeholder="Filme ou série?"
                 [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="titulo" placeholder="Digite um gênero para pesquisar (exemplo: Comédia)"
-                [(ngModel)]='nomeTema' (keyup)='findByGeneroTema()'>
+              <input type="text" class="form-control" id="titulo" placeholder="Gênero (exemplo: Comédia, Drama, Suspense etc)"
+                [(ngModel)]='nomeGenero' (keyup)='findByGeneroTema()'>
             </div>
           </div>
         </div>
@@ -297,14 +297,24 @@
           </div>
 
           <div class="form-group">
-            <label for="tema">Escolha um tema:
+            <label for="tema">Escolha categoria e gênero:
               <a *ngIf='authService.adm()' routerLink="/tema" data-dismiss="modal"> | Cadastre um novo</a></label>
             <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
               <option *ngFor='let item of listaTemas' value="{{item.id}}">
-                {{item.descricao}}</option>
+                {{item.descricao}} - {{item.categoria}}</option>
 
             </select>
           </div>
+
+          <!-- <div class="form-group">
+            <label for="tema">Escolha um gênero:
+              <a *ngIf='authService.adm()' routerLink="/tema" data-dismiss="modal"> | Cadastre um novo</a></label>
+            <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+              <option *ngFor='let item of listaTemas' value="{{item.id}}">
+                {{item.categoria}}</option>
+
+            </select>
+          </div> -->
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>

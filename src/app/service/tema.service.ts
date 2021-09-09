@@ -30,7 +30,7 @@ export class TemaService {
   }
 
   getByNomeGenero(genero: string): Observable<Tema[]>{
-    return this.http.get<Tema[]>(`https://genflix.herokuapp.com/temas/descricao/${genero}`)
+    return this.http.get<Tema[]>(`https://genflix.herokuapp.com/temas/categoria/${genero}`)
   }
 
   postTema(tema: Tema): Observable<Tema>{

@@ -107,6 +107,16 @@ export class InicioComponent implements OnInit {
     })
   }
 
+  findByNomeCritica(){
+    if(this.tituloPost == ''){
+      this.getAllCriticas()
+    } else{
+    this.postagemService.getAllCriticas().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+    })
+  }
+}
+
   findByNomeTema(){
 
     if(this.tituloPost == ''){
