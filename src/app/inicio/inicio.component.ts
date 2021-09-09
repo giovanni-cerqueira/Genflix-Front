@@ -21,6 +21,7 @@ export class InicioComponent implements OnInit {
 
   tituloPost: string
   nomeTema: string
+  nomeGenero: string
 
   listaTemas: Tema[]
   idTema: number
@@ -116,7 +117,16 @@ export class InicioComponent implements OnInit {
       })
     }
 
+  }
 
+  findByGeneroTema(){
+    if(this.tituloPost == ''){
+      this.getAllTemas()
+    } else {
+      this.temaService.getByNomeGenero(this.nomeGenero).subscribe((resp: Tema[]) => {
+        this.listaTemas = resp
+      })
+    }
   }
 
 }
