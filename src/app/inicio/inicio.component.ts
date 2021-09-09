@@ -48,7 +48,7 @@ export class InicioComponent implements OnInit {
     }
 
     this.getAllTemas()
-    this.getAllPostagens()
+    this.getAllCriticas()
   }
 
   getAllTemas(){
@@ -63,8 +63,8 @@ export class InicioComponent implements OnInit {
     })
   }
 
-  getAllPostagens(){
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+  getAllCriticas(){
+    this.postagemService.getAllCriticas().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
   }
@@ -82,12 +82,13 @@ export class InicioComponent implements OnInit {
     this.user.id = this.idUser
     this.postagem.usuario = this.user
 
+
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       console.log(this.postagem)
       this.alertas.showAlertSuccess('Postagem realizada com sucesso!')
       this.postagem = new Postagem()
-      this.getAllPostagens()
+      this.getAllCriticas()
     })
 
   }
@@ -95,7 +96,7 @@ export class InicioComponent implements OnInit {
   findByTituloPostagem(){
 
     if(this.tituloPost == ''){
-      this.getAllPostagens()
+      this.getAllCriticas()
     } else{
 
     }

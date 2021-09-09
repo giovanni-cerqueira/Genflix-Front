@@ -66,19 +66,20 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getAllPostagens()
+    this.getAllFilmes()
   }
 
-  getAllPostagens(){
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
+  getAllFilmes(){
+    this.postagemService.getAllFilmes().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
+
   }
 
   findByTituloPostagem(){
 
     if(this.tituloPost == ''){
-      this.getAllPostagens()
+      this.getAllFilmes()
     } else{
 
     }
@@ -99,7 +100,7 @@ export class HomeComponent implements OnInit {
       console.log(this.postagem)
       this.alertas.showAlertSuccess('Filme realizado com sucesso!')
       this.postagem = new Postagem()
-      this.getAllPostagens()
+      this.getAllFilmes()
     })
 
   }
@@ -113,7 +114,7 @@ export class HomeComponent implements OnInit {
       console.log(this.postagem)
       this.alertas.showAlertSuccess('Filme atualizado com sucesso!')
       this.postagem = new Postagem()
-      this.getAllPostagens()
+      this.getAllFilmes()
 
       })
     }

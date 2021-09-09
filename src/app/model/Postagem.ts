@@ -10,8 +10,9 @@ export class Postagem{
     public token: string
     public curtidas: number
     public tipo: string
+    public criticas: string
+    public filmes: string
     public foto: string
-    public critica: string
     public usuario: User
     public tema: Tema
 }
