@@ -2,10 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 import { Postagem } from '../model/Postagem';
+import { Tema } from '../model/Tema';
 import { User } from '../model/User';
 import { AlertasService } from '../service/alertas.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
+import { TemaService } from '../service/tema.service';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +26,10 @@ export class HomeComponent implements OnInit {
   tituloPost: string
   nomeTema: string
 
+  listaTemas: Tema[]
+  tema: Tema = new Tema()
+  nomeGenero: string
+
   idTema: number
 
   user: User = new User()
@@ -36,7 +42,8 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private postagemService: PostagemService,
     public authService: AuthService,
-    private alertas: AlertasService
+    private alertas: AlertasService,
+    private temaService: TemaService
   ) { }
 
   customOptions: any = {
@@ -67,6 +74,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.getAllFilmes()
+    this.getAllTemas()
   }
 
   getAllFilmes(){
@@ -74,6 +82,12 @@ export class HomeComponent implements OnInit {
       this.listaPostagens = resp
     })
 
+  }
+
+  getAllTemas(){
+    this.temaService.getAllTema().subscribe((resp: Tema[]) => {
+      this.listaTemas = resp
+    })
   }
 
   findByTituloPostagem(){
@@ -116,6 +130,22 @@ export class HomeComponent implements OnInit {
       this.postagem = new Postagem()
       this.getAllFilmes()
 
+      })
+    }
+
+    findByGeneroTema(){
+      if(this.tituloPost == ''){
+        this.getAllTemas()
+      } else {
+        this.temaService.getByNomeGenero(this.nomeGenero).subscribe((resp: Tema[]) => {
+          this.listaTemas = resp
+        })
+      }
+    }
+
+    findByIdTema(){
+      this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
+        this.tema = resp
       })
     }
 }
