@@ -12,7 +12,7 @@ body{
 
 h3{
 margin: 0;
-text-align: center;
+text-align: start;
 margin-bottom: 20px;
 font-size: 25px;
 
@@ -23,7 +23,7 @@ justify-content: center;
 }
 
 
-.thumbnail, .card-body, .card-title{
+.thumbnail, .card-body, .card-title, .editar-deletar {
   position: relative;
   display: flex;
   justify-content: center;
