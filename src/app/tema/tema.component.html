@@ -13,6 +13,17 @@
       <div class="row d-flex justify-content-center mt-4 mb-5">
         <div class="col-md-3">
           <div class="form-group">
+            <div class="form-group">
+              <select [(ngModel)]='tema.categoria' type="text" class="form-control" id="categoria">
+                  <option value="comedia">Comédia</option>
+                  <option value="drama">Drama</option>
+                  <option value="suspense">Suspense</option>
+                  <option value="romance">Romance</option>
+                  <option value="animacao">Animação</option>
+
+                </select>
+          </div>
+
             <input [(ngModel)]='tema.descricao' type="text" class="form-control" id="descricao" placeholder="Digite a descrição do tema">
           </div>
 
