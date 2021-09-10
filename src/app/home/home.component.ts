@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
   listaTemas: Tema[]
   tema: Tema = new Tema()
   nomeGenero: string
+  tituloSerie: string
 
   idTema: number
 
@@ -74,11 +75,19 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
     this.getAllFilmes()
+    this.getAllSeries()
     this.getAllTemas()
   }
 
   getAllFilmes(){
     this.postagemService.getAllFilmes().subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+    })
+
+  }
+
+  getAllSeries(){
+    this.postagemService.getAllSeries().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
 
@@ -103,6 +112,16 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  findByTituloSerie(){
+    if(this.tituloSerie == ''){
+      this.getAllSeries()
+    } else{
+    this.postagemService.getBySeriePostagem(this.tituloSerie).subscribe((resp: Postagem[]) => {
+      this.listaPostagens = resp
+    })
+  }
+}
+
   publicar(){
 
     this.user.id = this.idUser
@@ -112,7 +131,7 @@ export class HomeComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       console.log(this.postagem)
-      this.alertas.showAlertSuccess('Filme realizado com sucesso!')
+      
       this.postagem = new Postagem()
       this.getAllFilmes()
     })

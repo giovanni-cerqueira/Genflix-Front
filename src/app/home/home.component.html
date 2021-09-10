@@ -87,51 +87,9 @@
         </ng-template>
       </owl-carousel-o>
 
-      <div class="comeco">
-        <h3 class="display-8 text-light">Adicionados recentemente</h3>
-      </div>
-      <owl-carousel-o [options]="customOptions">
+     
 
-        <ng-template carouselSlide *ngFor='let item of listaPostagens | orderBy : key : reverse'>
-          <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="editar-deletar text-info mr-3"
-            href="">Editar</a>
-          <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="editar-deletar  text-danger"
-            href="">Apagar</a>
 
-          <div class="thumbnail">
-            <img class="box-film" src="{{item.foto}}">
-            <div class="overlay">
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title text-light text-center">{{item.titulo}}
-            </h5>
-          </div>
-        </ng-template>
-      </owl-carousel-o>
-
-      <div class="comeco">
-        <h3 class="display-8 text-light">Recomendados</h3>
-      </div>
-      <owl-carousel-o [options]="customOptions">
-
-        <ng-template carouselSlide *ngFor='let item of listaPostagens | orderBy : key : reverse'>
-          <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="editar-deletar text-info mr-3"
-            href="">Editar</a>
-          <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="editar-deletar  text-danger"
-            href="">Apagar</a>
-
-          <div class="thumbnail">
-            <img class="box-film" src="{{item.foto}}">
-            <div class="overlay">
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title text-light text-center">{{item.titulo}}
-            </h5>
-          </div>
-        </ng-template>
-      </owl-carousel-o>
 
 
       <!-- <div class="col-md-6">

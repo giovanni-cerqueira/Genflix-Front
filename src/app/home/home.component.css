@@ -3,8 +3,10 @@
   background-color: #343A40 !important;
 }
 body{
-
   background-color: #343A40 !important;
+}
+
+.modal-open {overflow: auto; padding-right: 0! Important;
 }
 .titulo-filmes{
   margin-top: 110px;
