@@ -22,6 +22,7 @@ export class InicioComponent implements OnInit {
   tituloPost: string
   nomeTema: string
   nomeGenero: string
+  criticas: string
 
   listaTemas: Tema[]
   idTema: number
@@ -111,7 +112,7 @@ export class InicioComponent implements OnInit {
     if(this.tituloPost == ''){
       this.getAllCriticas()
     } else{
-    this.postagemService.getAllCriticas().subscribe((resp: Postagem[]) => {
+    this.postagemService.getByCriticaPostagem(this.criticas).subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
     })
   }

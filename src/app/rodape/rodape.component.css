@@ -21,3 +21,7 @@ ul.social-network li{
 .fa-github:hover{
   color: #727272;
 }
+
+.dark{
+  background-color: #202830;
+}

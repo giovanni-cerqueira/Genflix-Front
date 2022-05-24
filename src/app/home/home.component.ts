@@ -131,7 +131,7 @@ export class HomeComponent implements OnInit {
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {
       this.postagem = resp
       console.log(this.postagem)
-      
+
       this.postagem = new Postagem()
       this.getAllFilmes()
     })

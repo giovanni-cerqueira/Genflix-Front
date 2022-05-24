@@ -8,7 +8,7 @@
             <h5 class="texto2">Veja a opinião dos nossos assinantes!</h5>
           </div>
         </div>
-        <div class="row d-flex align-items-center text-center justify-content-center mb-5">
+        <div class="row d-flex align-items-center text-center justify-content-center mb-2">
           <div class="col-md-6">
             <button class="btn btn-outline-light mr-2" data-bs-toggle="modal" data-bs-target="#novaPostagem"
               data-toggle="modal" data-target="#novaPostagem">
@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-end">
-        <img class="imagem-lado" src="https://i.imgur.com/BpWt30m.png" alt="Pessoas conversando" width="400px" height="400px" />
+        <img class="imagem-lado" src="https://imagensemoldes.com.br/wp-content/uploads/2020/06/Ilustra%C3%A7%C3%A3o-Cinema-PNG.png" alt="Pessoas conversando" width="400px" height="400px" />
       </div>
     </div>
   </div>
@@ -214,7 +214,7 @@
 
 
         <div class="row d-flex justify-content-center">
-          <div class="col-md-6" *ngFor='let tema of listaTemas'>
+          <div class="col-md-8" *ngFor='let tema of listaTemas'>
             <div class="card border-0" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
               <div class="card-body " >
 
@@ -224,10 +224,11 @@
                   <div class="row align-items-center  text-center">
                     <img class="rounded-circle" style="width: 90px; height: 90px;" src="{{item.usuario.foto}}">
 
-                    <h6 class="m-3">{{item.usuario.nome}}</h6>
+                    <h6 class="m-6">{{item.usuario.nome}}</h6>
                   </div>
 
                 </div>
+
 
 
                 <div class="col-md-12">

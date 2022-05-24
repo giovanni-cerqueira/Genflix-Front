@@ -1,5 +1,5 @@
 <body>
-<div class="container bg-dark">
+<div class="container fundo">
 
   <div class="row">
     <div class="col-md-12">
@@ -45,7 +45,7 @@
         <input [(ngModel)]='user.dataNascimento' class="form-control bg-dark text-white" type="date" name="dataNasc" id="dataNasc" placeholder="Data de Nascimento">
       </div>
 
-      <div *ngIf='authService.adm()' class="form-group">
+      <div  class="form-group">
         <label for="usuario">Tipo de usuário</label>
         <select class="form-control bg-dark text-white" name="tipo" id="tipo" (change)='tipoUser($event)'>
           <option>Selecione o tipo de usuário: </option>

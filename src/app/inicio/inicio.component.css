@@ -7,20 +7,20 @@
 }
 
 #postagens{
-  background-color: #343A40;
+  background-color: #202830;
 }
 
 .comeco{
-  background-color: #343A40;
+  background-color: #202830;
 }
 body{
-  background-color: #343A40 !important;
+  background-color: #202830 !important;
 }
 .texto1{
-  margin-top: 150px !important;
+  margin-top: 80px !important;
 }
 .imagem-lado{
-  margin-top: 180px !important;
+  margin-top: 20px !important;
 }
 .container-fluid .card{
   border: #f3f4f7;
@@ -30,7 +30,7 @@ body{
   box-shadow: #000 0px 0px 10px;
 }
 .card .card-body{
-  background-color: #6C757D;
+  background-color: #495b6d;
   color: #f3f4f7;
 }
 .card p, small, span{

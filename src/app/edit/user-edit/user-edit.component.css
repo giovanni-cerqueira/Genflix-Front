@@ -5,8 +5,12 @@ form .form-control{
   border-radius: 50px;
 }
 body{
-  background: #343A40;
+  background: #000000;
 }
 label{
   color: #fff;
+}
+
+.fundo{
+  background-color: #000000;
 }
