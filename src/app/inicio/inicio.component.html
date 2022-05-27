@@ -4,17 +4,17 @@
       <div class="col-md-6">
         <div class="row align-items-center text-center justify-content-center">
           <div class="col-md-8 text-white">
-            <h4 class="texto1">Na dúvida se vale a pena ou não assistir um filme do nosso catálogo?</h4>
-            <h5 class="texto2">Veja a opinião dos nossos assinantes!</h5>
+            <h4 class="texto1">Na dúvida de assistir um filme do catálogo?</h4>
+            <h5 class="texto2">Veja a opinião de outros assinantes ou publique a sua crítica!</h5>
           </div>
         </div>
         <div class="row d-flex align-items-center text-center justify-content-center mb-2">
           <div class="col-md-6">
-            <button class="btn btn-outline-light mr-2" data-bs-toggle="modal" data-bs-target="#novaPostagem"
+            <button class="btn btn-outline-light mr-2 mt-3" data-bs-toggle="modal" data-bs-target="#novaPostagem"
               data-toggle="modal" data-target="#novaPostagem">
               Publicar uma Crítica
             </button>
-            <a *ngIf='authService.adm()' href="#postagens" class="btn btn-outline-light">Ver Críticas</a>
+            <a href="#postagens" class="btn btn-outline-light mt-3">Ver Críticas</a>
           </div>
         </div>
       </div>
@@ -26,7 +26,7 @@
 
   <div class="container-fluid" id="postagens">
     <nav>
-      <div class="nav nav-tabs d-flex justify-content-center" id="nav-tab" role="tablist">
+      <div class="nav nav-tabs d-flex justify-content-center mt-5" id="nav-tab" role="tablist">
 
         <a class="nav-link active text-secondary font-weight-bold" id="nav-todasPostagens-tab" data-toggle="tab"
           href="#todasPostagens" role="tab" aria-controls="nav-todasPostagens" aria-selected="true">Todas as
