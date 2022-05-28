@@ -1,3 +1,5 @@
+import { User } from 'src/app/model/User';
+import { AuthService } from 'src/app/service/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Postagem } from 'src/app/model/Postagem';
@@ -13,14 +15,19 @@ export class PostagemDeleteComponent implements OnInit {
 
 
   postagem: Postagem = new Postagem()
+  listaPostagens: Postagem[]
 
   idPost: number
+
+  user: User = new User()
+  idUser = environment.id
 
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private postagemService: PostagemService
+    private postagemService: PostagemService,
+    public authService: AuthService
   ) { }
 
   ngOnInit(){

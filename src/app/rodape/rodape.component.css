@@ -25,3 +25,12 @@ ul.social-network li{
 .dark{
   background-color: #202830;
 }
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.items{
+  margin-right: 20px;
+}

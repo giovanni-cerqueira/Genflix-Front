@@ -45,6 +45,10 @@ export class PostagemService {
     return this.http.get<Postagem[]>(`https://genflix.herokuapp.com/postagens/criticas/${criticas}`)
   }
 
+  getByFilmePostagem(filme: string): Observable<Postagem[]>{
+    return this.http.get<Postagem[]>(`https://genflix.herokuapp.com/postagens/titulo/${filme}`)
+  }
+
   getBySeriePostagem(series: string): Observable<Postagem[]>{
     return this.http.get<Postagem[]>(`https://genflix.herokuapp.com/postagens/series/${series}`)
   }

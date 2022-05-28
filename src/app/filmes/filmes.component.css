@@ -1,0 +1,83 @@
+.container-fluid{
+
+  background-color: #202830 !important;
+}
+body{
+  background-color: #202830 !important;
+}
+
+.modal-open {overflow: auto; padding-right: 0! Important;
+}
+.titulo-filmes{
+  margin-top: 110px;
+}
+
+h3{
+margin: 0;
+text-align: start;
+margin-bottom: 20px;
+font-size: 25px;
+
+}
+.card-body .card-title{
+display: flex;
+justify-content: center;
+}
+
+
+.thumbnail, .card-body, .card-title, .editar-deletar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 95%;
+}
+owl-carousel-o{
+  width: 180px !important;
+  height: 270px !important;
+}
+.box-film{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 180px !important;
+  height: 270px !important;
+}
+.box-film image{
+display: block !important;
+justify-content: center;
+opacity: 1 !important;
+transition: .5s ease !important;
+backface-visibility: hidden !important;
+}
+
+
+.overlay {
+width: 100px !important;
+height: 100px !important;
+transition: .5s ease !important;
+opacity: 0;
+position: absolute !important;
+top: 50% !important;
+left: 50% !important;
+right: 50% !important;
+bottom: 50% !important;
+transform: translate(-50%, -50%) !important;
+background-image: url('https://i.pinimg.com/originals/a1/1b/ab/a11babe56eada90b29709f82bbf7dec4.png');
+background-repeat: no-repeat;
+background-size: 100% 100%;
+cursor: pointer;
+
+}
+
+.thumbnail:hover .image {
+opacity: .8;
+cursor: pointer;
+
+}
+
+.thumbnail:hover .overlay {
+opacity: 1;
+cursor: pointer;
+
+}
+

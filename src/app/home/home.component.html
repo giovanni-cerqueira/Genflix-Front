@@ -40,8 +40,8 @@
 
     <div class="row d-flex align-items-center text-center justify-content-center mb-5">
       <div class="col-md-6">
-        <button *ngIf='authService.adm()' class="btn btn-outline-light mr-2" data-bs-toggle="modal" data-bs-target="#novaPostagem"
-          data-toggle="modal" data-target="#novaPostagem">
+        <button *ngIf='authService.adm()' class="btn btn-outline-light mr-2" data-bs-toggle="modal"
+          data-bs-target="#novaPostagem" data-toggle="modal" data-target="#novaPostagem">
           Adicionar Filme
         </button>
       </div>
@@ -54,7 +54,8 @@
         <div class="col-md-4">
           <div class="form-group">
             <input type="text" class="form-control" id="titulo" placeholder="Digite o título para pesquisar"
-              [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()' [(ngModel)]='nomeGenero' (keyup)='findByGeneroTema()'>
+              [(ngModel)]='tituloPost' (keyup)='findByTituloPostagem()' [(ngModel)]='nomeGenero'
+              (keyup)='findByGeneroTema()'>
           </div>
         </div>
       </div>
@@ -66,31 +67,6 @@
 
       <div class="comeco">
         <h3 class="display-8 text-light">Mais populares</h3>
-      </div>
-      <owl-carousel-o [options]="customOptions">
-
-        <ng-template carouselSlide *ngFor='let item of listaPostagens | orderBy : key : reverse'>
-          <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="editar-deletar text-info mr-3"
-            href="">Editar</a>
-          <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="editar-deletar  text-danger"
-            href="">Apagar</a>
-
-          <div class="thumbnail">
-            <img class="box-film" src="{{item.foto}}">
-            <div class="overlay">
-            </div>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title text-light text-center">{{item.titulo}}
-            </h5>
-          </div>
-        </ng-template>
-      </owl-carousel-o>
-
-
-
-      <div class="comeco">
-        <h3 class="display-8 text-light"></h3>
       </div>
       <owl-carousel-o [options]="customOptions">
 
@@ -162,7 +138,7 @@
         <div class="modal-body">
           <div class="form-group">
             <label for="titulo">Título</label>
-            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
+            <input [(ngModel)]='postagem.criticas' type="text" class="form-control" id="titulo"
               placeholder="Digite o título do filme (Exemplo: Shrek)">
           </div>
 

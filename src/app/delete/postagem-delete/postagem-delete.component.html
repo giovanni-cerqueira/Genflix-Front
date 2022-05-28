@@ -1,37 +1,36 @@
-<div class="container mb-5 mt-5">
+<body>
+  <div class="container">
 
-  <div class="row">
-    <div class="col-md-12">
-      <h1 class="text-center text-secondary">Apagar postagem</h1>
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="text-center text-secondary">Tem certeza de que deseja deletar?</h1>
+      </div>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <h4>Tem certeza que quer apagar a postagem?</h4>
-    </div>
-  </div>
-
-  <div class="row d-flex justify-content-center mt-4">
-    <div class="col-md-4">
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title m-0">{{postagem.titulo}}</h5>
-          <h5 class="card-title m-0">{{postagem.series}}</h5>
-          <small class="card-text">Tema: {{postagem.tema.descricao}}</small>
-          <p class="card-text mt-3">{{postagem.texto}}<small class="text-muted">
-              {{postagem.data | date: 'dd/MM/yyyy'}} às {{postagem.data | date: 'HH:mm'}}</small></p>
+    <div class="row d-flex justify-content-center mt-4">
+      <div class="col-md-4">
+        <div class="card mb-5 text-center">
+          <div class="card-body">
+            <h2 class="card-title m-0">{{postagem.criticas}}</h2>
+            <div class="thumbnail">
+              <img *ngIf='authService.adm()' class="box-film" src="{{postagem.foto}}">
+              <div class="overlay">
+              </div>
+            </div>
+            <h2 class="card-title m-0">{{postagem.titulo}}</h2>
+            <h2 class="card-title m-0">{{postagem.series}}</h2>
+            <p class="card-text mt-3">{{postagem.texto}}<small class="text-muted"><br>
+                {{postagem.data | date: 'dd/MM/yyyy'}} às {{postagem.data | date: 'HH:mm'}}</small></p>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="row mt-5 mb">
+      <div class="col-md-12 d-flex justify-content-center">
+        <button class="btn btn-danger mr-2" routerLink='/inicio'>Não</button>
+        <button class="btn btn-success ml-2" (click)='apagar()'>Sim</button>
+      </div>
+    </div>
   </div>
-
-<div class="row mt-5">
-<div class="col-md-12 d-flex justify-content-center">
-  <button class="btn btn-danger mr-4" routerLink='/inicio'>Não</button>
-  <button class="btn btn-success" (click)='apagar()'>Sim</button>
-</div>
-</div>
-
-
-</div>
+</body>

@@ -19,7 +19,9 @@
         </div>
       </div>
       <div class="col-md-4 d-flex justify-content-end">
-        <img class="imagem-lado" src="https://imagensemoldes.com.br/wp-content/uploads/2020/06/Ilustra%C3%A7%C3%A3o-Cinema-PNG.png" alt="Pessoas conversando" width="400px" height="400px" />
+        <img class="imagem-lado"
+          src="https://imagensemoldes.com.br/wp-content/uploads/2020/06/Ilustra%C3%A7%C3%A3o-Cinema-PNG.png"
+          alt="Pessoas conversando" width="400px" height="400px" />
       </div>
     </div>
   </div>
@@ -85,8 +87,10 @@
                       {{item.data | date: 'HH:mm'}}</small></p>
 
                 </div>
-                <button *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</button>
-                <button *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</button>
+                <button *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3"
+                  href="">Editar</button>
+                <button *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger"
+                  href="">Apagar</button>
 
               </div>
             </div>
@@ -131,32 +135,13 @@
               <div class="card-body">
                 <div class="row d-flex">
                   <div class="col-md-12">
-
-                    <!--      <div class="row d-flex">
-                      <div class="col-md-2">
-                        <img class="card-img-top rounded-circle bd-highlight" style="width: 90px; height: 90px;"
-                          src="{{item.usuario.foto}}">
-                      </div>
-
-                    </div> -->
-
-                    <!--   <small class="card-text">Tema: {{item.tema.descricao}}</small> -->
-
-
-
                     <h5 class="card-title">{{item.criticas}}</h5>
-
-
                   </div>
                 </div>
-
-
                 <div>
                   <p>{{item.texto}}</p>
                   <p><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às
                       {{item.data | date: 'HH:mm'}}</small></p>
-
-
                 </div>
                 <a [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
                 <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
@@ -201,12 +186,13 @@
         <div class="row d-flex justify-content-center mt-5 mb-5">
           <div class="col-md-4">
             <div class="form-group">
-              <input type="text" class="form-control" id="titulo" placeholder="Filme ou série?"
-                [(ngModel)]='nomeTema' (keyup)='findByNomeTema()'>
+              <input type="text" class="form-control" id="titulo" placeholder="Filme ou série?" [(ngModel)]='nomeTema'
+                (keyup)='findByNomeTema()'>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="titulo" placeholder="Gênero (exemplo: Comédia, Drama, Suspense etc)"
-                [(ngModel)]='nomeGenero' (keyup)='findByGeneroTema()'>
+              <input type="text" class="form-control" id="titulo"
+                placeholder="Gênero (exemplo: Comédia, Drama, Suspense etc)" [(ngModel)]='nomeGenero'
+                (keyup)='findByGeneroTema()'>
             </div>
           </div>
         </div>
@@ -216,7 +202,7 @@
         <div class="row d-flex justify-content-center">
           <div class="col-md-8" *ngFor='let tema of listaTemas'>
             <div class="card border-0" *ngFor='let item of tema.postagem | orderBy : key : reverse'>
-              <div class="card-body " >
+              <div class="card-body ">
 
 
 
@@ -240,8 +226,10 @@
                       {{item.data | date: 'HH:mm'}}</small></p>
 
                 </div>
-                <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3" href="">Editar</a>
-                <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
+                <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3"
+                  href="">Editar</a>
+                <a *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger"
+                  href="">Apagar</a>
 
               </div>
             </div>
