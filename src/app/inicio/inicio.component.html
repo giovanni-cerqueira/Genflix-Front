@@ -56,7 +56,7 @@
           <div class="col-md-4">
             <div class="form-group">
               <input type="text" class="form-control" id="titulo" placeholder="Digite o título para pesquisar"
-                [(ngModel)]='tituloPost' (keyup)='findByNomeCritica()'>
+              [(ngModel)]='criticas'  (keyup)='findByNomeCritica()'>
             </div>
           </div>
         </div>
@@ -79,7 +79,7 @@
 
 
                 <div class="col-md-12">
-                  <h5 class="card-title mt-4">{{item.criticas}}</h5>
+                  <h4 class="card-title mt-4">{{item.criticas}}</h4>
 
 
                   <p>{{item.texto}}</p>
@@ -135,7 +135,7 @@
               <div class="card-body">
                 <div class="row d-flex">
                   <div class="col-md-12">
-                    <h5 class="card-title">{{item.criticas}}</h5>
+                    <h4 class="card-title mt-4">{{item.criticas}}</h4>
                   </div>
                 </div>
                 <div>
@@ -208,9 +208,9 @@
 
                 <div class="col-md-6">
                   <div class="row align-items-center  text-center">
-                    <img class="rounded-circle" style="width: 90px; height: 90px;" src="{{item.usuario.foto}}">
+                    <img class="rounded-circle" style="width: 50px; height: 50px;" src="{{item.usuario.foto}}">
 
-                    <h6 class="m-6">{{item.usuario.nome}}</h6>
+                    <h6 class="ml-3">{{item.usuario.nome}}</h6>
                   </div>
 
                 </div>
@@ -218,7 +218,7 @@
 
 
                 <div class="col-md-12">
-                  <h5 class="card-title mt-2">{{item.criticas}}</h5>
+                  <h4 class="card-title mt-4">{{item.criticas}}</h4>
 
 
                   <p>{{item.texto}}</p>

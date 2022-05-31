@@ -22,9 +22,6 @@ import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delet
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
 import { AlertasComponent } from './alertas/alertas.component';
 import { HomeComponent } from './home/home.component';
-import { FilmesComponent } from './filmes/filmes.component';
-import { SeriesComponent } from './series/series.component';
-import { PacotesComponent } from './pacotes/pacotes.component';
 import { CriticasComponent } from './criticas/criticas.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -48,9 +45,6 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     UserEditComponent,
     AlertasComponent,
     HomeComponent,
-    FilmesComponent,
-    SeriesComponent,
-    PacotesComponent,
     CriticasComponent
 
   ],

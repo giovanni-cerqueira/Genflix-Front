@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   listaPostagens: Postagem[]
 
   fotoPost: string
+  tituloFilme: string
   tituloPost: string
   nomeTema: string
 
@@ -112,16 +113,6 @@ export class HomeComponent implements OnInit {
     })
   }
 
-  findByTituloSerie(){
-    if(this.tituloSerie == ''){
-      this.getAllSeries()
-    } else{
-    this.postagemService.getBySeriePostagem(this.tituloSerie).subscribe((resp: Postagem[]) => {
-      this.listaPostagens = resp
-    })
-  }
-}
-
   publicar(){
 
     this.user.id = this.idUser
@@ -139,7 +130,7 @@ export class HomeComponent implements OnInit {
   }
 
   atualizar(){
-    this.postagem.foto = this.fotoPost
+    this.postagem.foto = this.foto
     this.postagem.titulo = this.tituloPost
 
     this.postagemService.postPostagem(this.postagem).subscribe((resp: Postagem) => {

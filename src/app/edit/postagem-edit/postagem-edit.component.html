@@ -12,7 +12,7 @@
 
         <div class="form-group" *ngIf='authService.adm()'>
           <label for="titulo">Titulo do filme</label>
-          <input [(ngModel)]='postagem.titulo' name="titulo" type="text" class="form-control bg-dark text-white" id="titulo"
+          <input [(ngModel)]='postagem.titulo'  name="titulo" type="text" class="form-control bg-dark text-white" id="titulo"
             placeholder="Digite o titulo">
         </div>
         <div class="form-group" *ngIf='authService.adm()'>
@@ -21,7 +21,7 @@
             placeholder="Digite o titulo">
         </div>
         <div class="form-group">
-          <label for="titulo">Titulo</label>
+          <label for="titulo">Titulo da Crítica</label>
           <input [(ngModel)]='postagem.criticas' name="titulo" type="text" class="form-control bg-dark text-white" id="titulo"
             placeholder="Digite o titulo">
         </div>

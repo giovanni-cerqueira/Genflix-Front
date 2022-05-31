@@ -8,3 +8,8 @@ h1{
 label{
   color: #fff;
 }
+
+.container{
+  background-color: #343A40 !important;
+  padding-bottom: 30px;
+}

@@ -66,10 +66,10 @@
             <div class="card-body"> -->
 
       <div class="comeco">
-        <h3 class="display-8 text-light">Mais populares</h3>
+        <h3 class="display-8 text-light">Catálogo</h3>
       </div>
-      <owl-carousel-o [options]="customOptions">
 
+      <owl-carousel-o [options]="customOptions" >
         <ng-template carouselSlide *ngFor='let item of listaPostagens | orderBy : key : reverse'>
           <a *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="editar-deletar text-info mr-3"
             href="">Editar</a>
@@ -82,43 +82,10 @@
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title text-light text-center">{{item.titulo}}
-            </h5>
+            <h5 class="card-title text-light text-center">{{item.titulo}}</h5>
           </div>
         </ng-template>
       </owl-carousel-o>
-
-
-
-
-
-
-      <!-- <div class="col-md-6">
-                <div class="row align-items-center  text-center">
-                  <img class="rounded-circle" style="width: 50px; height: 50px;" src="{{item.usuario.foto}}">
-
-                  <h6 class="m-3">{{item.usuario.nome}}</h6>
-                </div>
-
-              </div>
-
-
-              <div class="col-md-12">
-                <h5 class="card-title mt-4">{{item.titulo}}</h5>
-
-
-                <p>{{item.texto}}</p>
-                <p><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às
-                    {{item.data | date: 'HH:mm'}}</small></p>
-
-              </div>
-
-
-      <button *ngIf='authService.adm()' [routerLink]="['/postagem-edit', item.id]" class="text-info mr-3"
-        href="">Editar</button>
-      <button *ngIf='authService.adm()' [routerLink]="['/postagem-delete', item.id]" class="text-danger"
-        href="">Apagar</button> -->
-
     </div>
   </div>
   <!-- </div>
@@ -137,13 +104,13 @@
         </div>
         <div class="modal-body">
           <div class="form-group">
-            <label for="titulo">Título</label>
-            <input [(ngModel)]='postagem.criticas' type="text" class="form-control" id="titulo"
+            <label for="titulo">Título do Filme</label>
+            <input [(ngModel)]='postagem.titulo' type="text" class="form-control" id="titulo"
               placeholder="Digite o título do filme (Exemplo: Shrek)">
           </div>
 
           <div class="form-group">
-            <label for="conteudo">Link da Foto:</label>
+            <label for="conteudo">Poster:</label>
             <textarea [(ngModel)]='postagem.foto' name="texto" id="conteudo" class="form-control" rows="3"></textarea>
           </div>
 
@@ -153,7 +120,6 @@
             <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
               <option *ngFor='let item of listaTemas' value="{{item.id}}">
                 {{item.descricao}} - {{item.categoria}}</option>
-
             </select>
           </div>
 

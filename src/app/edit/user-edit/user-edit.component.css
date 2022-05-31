@@ -14,3 +14,12 @@ label{
 .fundo{
   background-color: #202830;
 }
+
+img{
+  width: 200px !important;
+  height: 200px !important;
+}
+
+.inicio{
+  padding-bottom: 40px;
+}
