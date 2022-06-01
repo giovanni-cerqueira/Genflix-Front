@@ -1,5 +1,5 @@
 body {
-  background-image: url('../../assets/imgs/imagem-fundo-login.jpg');
+  background-color: #202830 !important;
   height: 100vh;
   opacity: 1.1;
   min-height: 100vh;
@@ -18,7 +18,7 @@ body {
   .login-card {
     border: 0;
     border-radius: 27.5px;
-    box-shadow: 0 10px 30px 0 rgba(172, 168, 168, 0.43);
+    box-shadow: 0 10px 30px 0 #0000;
     overflow: hidden;
   }
     .login-card-img {
