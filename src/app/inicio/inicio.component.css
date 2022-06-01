@@ -10,11 +10,21 @@
   background-color: #202830;
 }
 
+body{
+  background-color: #202830 !important;
+}
+
 .comeco{
   background-color: #202830;
 }
-body{
-  background-color: #202830 !important;
+
+.nav{
+  padding-top: 20px;
+}
+
+.imagem-fundo{
+    background-image: url('.././/../assets/imgs/imagem-fundo-login.jpg');
+    padding-bottom: 70px;
 }
 .texto1{
   font-weight: 900;
