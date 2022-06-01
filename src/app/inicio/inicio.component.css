@@ -44,4 +44,7 @@ body{
   color: #f3f4f7 !important;
 }
 
+.form-control{
+  border-radius: 50px !important;
+}
 

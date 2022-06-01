@@ -24,6 +24,7 @@ import { AlertasComponent } from './alertas/alertas.component';
 import { HomeComponent } from './home/home.component';
 import { CriticasComponent } from './criticas/criticas.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { PacotesComponent } from './pacotes/pacotes.component';
 
 
 
@@ -45,7 +46,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     UserEditComponent,
     AlertasComponent,
     HomeComponent,
-    CriticasComponent
+    CriticasComponent,
+    PacotesComponent
 
   ],
   imports: [

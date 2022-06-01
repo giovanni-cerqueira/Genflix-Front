@@ -55,7 +55,7 @@
         <div class="row d-flex justify-content-center mt-5">
           <div class="col-md-4">
             <div class="form-group">
-              <input type="text" class="form-control" id="titulo" placeholder="Digite o título para pesquisar"
+              <input type="text" aria-label="Search" class="form-control bg-dark text-white" id="titulo" placeholder="Digite o título da crítica para pesquisar"
               [(ngModel)]='criticas'  (keyup)='findByNomeCritica()'>
             </div>
           </div>
@@ -186,11 +186,11 @@
         <div class="row d-flex justify-content-center mt-5 mb-5">
           <div class="col-md-4">
             <div class="form-group">
-              <input type="text" class="form-control" id="titulo" placeholder="Filme ou série?" [(ngModel)]='nomeTema'
+              <input type="text" aria-label="Search" class="form-control bg-dark text-white" id="titulo" placeholder="Filme ou série?" [(ngModel)]='nomeTema'
                 (keyup)='findByNomeTema()'>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="titulo"
+              <input type="text" aria-label="Search" class="form-control bg-dark text-white" id="titulo"
                 placeholder="Gênero (exemplo: Comédia, Drama, Suspense etc)" [(ngModel)]='nomeGenero'
                 (keyup)='findByGeneroTema()'>
             </div>

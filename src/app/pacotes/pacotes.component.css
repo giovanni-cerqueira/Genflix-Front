@@ -1,0 +1,48 @@
+.background{
+  background-color: #202830 !important;
+}
+
+.card-body button{
+
+  color: #000;
+  font-size: 10pt;
+  font-weight: 700;
+  text-align: center;
+  width: 150px;
+  height: 40px;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: #000 0px 3px ;
+}
+.card-body button a{
+text-decoration: none;
+}
+
+.btn-assine-amarelo:hover{
+  transition: .5s ease;
+  transform: scale(110%);
+  background-color: #fbff00;
+  color: #000;
+  box-shadow: #000 0px 10px 4px;
+}
+
+.btn-assine-azul:hover{
+  transition: .5s ease;
+  transform: scale(110%);
+  background-color: #05b1d8;
+  color: #fff;
+  box-shadow: #000 0px 10px 4px;
+}
+
+.btn-assine-verde:hover{
+
+  transition: .5s ease;
+  transform: scale(110%);
+  background-color: #1ED761;
+  color: #fff;
+  box-shadow: #000 0px 10px 4px;
+}

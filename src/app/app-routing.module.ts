@@ -1,3 +1,4 @@
+import { PacotesComponent } from './pacotes/pacotes.component';
 import { CriticasComponent } from './criticas/criticas.component';
 import { HomeComponent } from './home/home.component';
 import { UserEditComponent } from './edit/user-edit/user-edit.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'tema', component: TemaComponent},
   {path: 'home', component: HomeComponent},
   {path: 'criticas', component: CriticasComponent},
+  {path: 'pacotes', component: PacotesComponent},
 
   {path: 'tema-edit/:id', component: TemaEditComponent},
   {path: 'tema-delete/:id', component: TemaDeleteComponent},
